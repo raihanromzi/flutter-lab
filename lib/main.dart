@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/stack.dart';
+import 'pages/dragable_dragtable_sizedbox_material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: StackWidget(),
+      home: DragableApp(),
     );
   }
 }
- 
