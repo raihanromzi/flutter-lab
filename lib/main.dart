@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/card_widget.dart';
+import 'package:flutter_lab/pages/hero_cliprrect_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CardWidget(),
+      home: HeroCliprrectWidget(),
     );
   }
 }
