@@ -28,8 +28,13 @@ class HeroCliprrectWidget extends StatelessWidget {
         ),
       ),
       body: GestureDetector(
-        onTap: () {},
-        child: Center(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return SecondPage();
+          }));
+        },
+        child: Hero(
+          tag: 'imageHero',
           child: ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: Container(
@@ -63,7 +68,22 @@ class SecondPage extends StatelessWidget {
                       end: FractionalOffset.bottomRight,
                       begin: FractionalOffset.topLeft))),
         ),
-        body: Container(),
+        body: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(100),
+              child: Container(
+                width: 200,
+                height: 200,
+                child: Image(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://asset.kompas.com/crops/2UjakURjSResZEoyWB9IyeFkGlU=/0x0:719x479/750x500/data/photo/2019/10/28/5db6b82dcae3c.png')),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
